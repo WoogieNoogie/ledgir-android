@@ -1,1 +1,3 @@
 -keepattributes SourceFile,LineNumberTable
+-keepattributes Signature
+-keepattributes *Annotation*
