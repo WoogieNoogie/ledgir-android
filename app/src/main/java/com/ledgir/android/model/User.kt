@@ -8,6 +8,5 @@ data class User(
     var externalSource: String? = null,
     var firstName: String? = null,
     var lastName: String? = null,
-    var guid: String? = null,
     var pushTokens: List<String>? = null
 )
