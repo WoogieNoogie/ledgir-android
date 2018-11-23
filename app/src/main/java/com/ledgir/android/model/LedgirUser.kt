@@ -1,6 +1,6 @@
 package com.ledgir.android.model
 
-data class User(
+data class LedgirUser(
     var accountId: String? = null,
     var deviceIds: List<String>? = null,
     var emailAddress: String? = null,

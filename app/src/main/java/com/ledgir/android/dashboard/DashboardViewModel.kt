@@ -5,17 +5,17 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.ledgir.android.model.Account
-import com.ledgir.android.model.User
+import com.ledgir.android.model.LedgirAccount
+import com.ledgir.android.model.LedgirUser
 
 class DashboardViewModel : ViewModel() {
     val user = FirebaseAuth.getInstance().currentUser
 
     val database = FirebaseFirestore.getInstance()
 
-    val userData = MutableLiveData<User>()
+    val userData = MutableLiveData<LedgirUser>()
 
-    val accountData = MutableLiveData<Account>()
+    val accountData = MutableLiveData<LedgirAccount>()
 
     init {
         Log.d("USER", user!!.uid)
@@ -25,7 +25,7 @@ class DashboardViewModel : ViewModel() {
                 .get()
                 .addOnCompleteListener {
                     if (it.isSuccessful) {
-                        accountData.postValue(it.result!!.toObject(Account::class.java))
+                        accountData.postValue(it.result!!.toObject(LedgirAccount::class.java))
                     }
                 }
         }
@@ -34,7 +34,7 @@ class DashboardViewModel : ViewModel() {
             .get()
             .addOnCompleteListener {
                 if (it.isSuccessful) {
-                    userData.postValue(it.result!!.documents.first().toObject(User::class.java))
+                    userData.postValue(it.result!!.documents.first().toObject(LedgirUser::class.java))
                 }
             }
     }

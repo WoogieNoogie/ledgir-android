@@ -1,6 +1,6 @@
 package com.ledgir.android.model
 
-data class Account(
+data class LedgirAccount(
     var budgetCredit: Int = 0,
     var expensesCredit: Int = 0,
     var budgetEntertainment: Int = 0,
