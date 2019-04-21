@@ -39,14 +39,14 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0'
 
-    implementation 'com.google.firebase:firebase-core:16.0.6'
-    implementation 'com.google.firebase:firebase-firestore:17.1.5'
-    implementation 'com.google.firebase:firebase-messaging:17.3.4'
-    implementation 'com.google.firebase:firebase-perf:16.2.3'
-    implementation 'com.google.firebase:firebase-auth:16.1.0'
+    implementation 'com.google.firebase:firebase-core:16.0.8'
+    implementation 'com.google.firebase:firebase-firestore:18.2.0'
+    implementation 'com.google.firebase:firebase-messaging:17.6.0'
+    implementation 'com.google.firebase:firebase-perf:16.2.5'
+    implementation 'com.google.firebase:firebase-auth:16.2.1'
     implementation 'com.firebaseui:firebase-ui-auth:4.1.0'
 
-    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.8'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.9'
 
     testImplementation 'junit:junit:4.12'
 
