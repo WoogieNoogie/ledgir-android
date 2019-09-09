@@ -21,7 +21,7 @@ class MainViewModel(application: Application) : BaseViewModel(application) {
         }
     }
 
-    suspend fun setFirebaseValues(context: Context) = coroutineScope {
+    private suspend fun setFirebaseValues(context: Context) = coroutineScope {
         val auth = async {
             FirebaseAuth.getInstance()
         }

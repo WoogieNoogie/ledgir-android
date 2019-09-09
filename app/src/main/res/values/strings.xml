@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Ledgir</string>
+
+    <string name="activity_dashboard_name">Dashboard</string>
+
+    <string name="activity_transactions_name">Transactions</string>
+
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
 </resources>

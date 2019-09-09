@@ -19,7 +19,8 @@ class DashboardViewModel(application: Application) : BaseViewModel(application) 
 
     init {
         scope.launch {
-            val viewState = DashboardViewState(getFirebaseUser().await(), getFirestore().await())
+            val viewState =
+                DashboardViewState(getFirebaseUserAsync().await(), getFirestoreAsync().await())
             viewState.database.collection("users")
                 .whereEqualTo("externalId", viewState.firebaseUser.uid)
                 .get()
@@ -41,11 +42,11 @@ class DashboardViewModel(application: Application) : BaseViewModel(application) 
         }
     }
 
-    suspend fun getFirebaseUser() = coroutineScope {
+    private suspend fun getFirebaseUserAsync() = coroutineScope {
         async { FirebaseAuth.getInstance().currentUser!! }
     }
 
-    suspend fun getFirestore() = coroutineScope {
+    private suspend fun getFirestoreAsync() = coroutineScope {
         async { FirebaseFirestore.getInstance() }
     }
 
